@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block titulo %}  Editar Libro {% endblock %}
+
+{% block contenido %} 
+<div class="card  bg-dark ">
+    <div class="card-header h6 p-3 m-2 bg-warning">
+        Editar informacion del libro
+    </div>
+    <div class="card-body  bg-dark text-light">
+        <h4 class="card-title">Datos del libro</h4>
+        {% include 'libros/form.html' %}
+
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+</div>
+
+{% endblock %}

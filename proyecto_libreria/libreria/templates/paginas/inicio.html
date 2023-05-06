@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block titulo %}  Inicio {% endblock %}
+
+{% block contenido %} 
+ 
+<div class="container-fluid text-center">
+    <div class="row">    
+            <div class="col">
+                <div class="p-5 pt-1 bg-light">
+                    <div class="container">
+                        <h1 class="display-3">!Bienvenidos! al sitio de la  librería</h1>
+                        <p class="lead">Accede al sistema <br><i class="bi bi-arrow-bar-down fs-1"></i> <hr></p>                        
+                        
+                        <p class="lead">
+                        <center> <a class="btn btn-outline-primary btn-lg" href="{% url 'libros' %}" role="button">Empezar <i class="bi bi-box-arrow-in-right"></i></a></center>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" fs-1 mt-5 d-flex justify-content-center">
+                    <i class="bi bi-journal-bookmark-fill"></i>
+                </div>
+                <p>"Somos una libreria virtual al alcance de todos"</p>
+            </div>        
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block titulo %}  Listado de libros {% endblock %}
+
+{% block contenido %} 
+ 
+<div class="card bg-dark text-light">
+    <div class="card-header p-3">
+        <a name="" id="" class="btn btn-primary" href="{% url 'crear' %}" role="button">Agregar <i class="bi bi-plus-circle-dotted"></i></a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title text-center fs-2 p-2 ">Libros</h4>
+        
+        <div class="table">
+            <table class="table table-borderless table-dark table-hover ">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                {% for libro in libros %}
+                <tr>
+                    <td>{{ libro.id }}</td>
+                    <td>{{ libro.titulo }}</td>
+
+                    <td>
+                    <img src="{{ libro.imagen.url }}" height="100"/>    
+                            
+                    </td>
+                    <td>{{ libro.descripcion }}</td>
+                    <td>
+                    <a name="" id="" class="btn btn-warning" href="{% url 'editar' libro.id %}" role="button"><i class="bi bi-pencil-square"></i></a>
+                            
+                    <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' libro.id %}" role="button"><i class="bi bi-trash"></i></a>
+                    </td>
+
+                </tr>
+                {% endfor %}        
+                   
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="card-footer text-muted">
+
+    </div>
+</div>
+
+{% endblock %}

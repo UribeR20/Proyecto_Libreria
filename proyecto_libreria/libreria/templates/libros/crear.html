@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %}  Agregar {% endblock %}
+
+{% block contenido %} 
+ 
+<div class="card">
+    <div class="card-header fs-6 bg-primary fw-bold text-light p-3">
+        Agregar un libro
+    </div>
+    <div class="card-body bg-dark text-light">
+        
+        {% include 'libros/form.html' %}
+
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+{% endblock %}
